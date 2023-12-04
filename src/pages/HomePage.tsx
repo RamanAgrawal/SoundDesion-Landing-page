@@ -1,4 +1,5 @@
 import Blog from "../layouts/Blog/Blog"
+import Footer from "../layouts/Footer/Footer"
 import Header from "../layouts/Header/Header"
 import Info from "../layouts/Info/Info"
 import Testimonials from "../layouts/Testimonial/Testimonials"
@@ -13,6 +14,7 @@ const HomePage = () => {
     <Info/>
     <Blog/>
     <Testimonials/>
+    <Footer/>
     </>
   )
 }
