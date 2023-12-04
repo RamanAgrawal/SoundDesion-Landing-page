@@ -16,7 +16,11 @@ footer {
       text-decoration: underline;
     }
   }
-
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
   .content-container {
     padding: 50px 0;
 
@@ -26,17 +30,13 @@ footer {
         font-weight: 700;
         font-size: 1.2rem;
       }
-      .social-icons {
-        display: flex;
-        gap: 1rem;
-        margin: 1.5rem 0;
-      }
-      ul{
+
+      ul {
         margin-top: 1rem;
-        li{
-            font-size: 1rem;
-            font-weight: 400;
-            margin:8px 16px
+        li {
+          font-size: 1rem;
+          font-weight: 400;
+          margin: 8px 16px;
         }
       }
     }
@@ -46,5 +46,25 @@ footer {
     font-size: 1rem;
     line-height: 1.4rem;
     color: white;
+  }
+  .mob {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  footer {
+    .content-container {
+      gap: 2.5rem;
+    }
+    .copyright {
+      display: none;
+    }
+    .mob {
+      display: block;
+    }
+    .social-icons {
+      margin-bottom: 0;
+    }
   }
 }

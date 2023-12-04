@@ -35,3 +35,40 @@
     }
   }
 }
+
+//tablet version
+
+@media(max-width: 1024px){
+  #testimonials {
+    .content-container {
+      flex-direction: column;
+      gap:3rem;
+      margin-left: 1.2rem;
+      margin-top: 3rem;
+      .testimonial {
+        display: flex;
+      gap:2rem;
+      width: 100%;
+      }
+    }
+  }
+}
+
+
+@media(max-width:720px){
+  #testimonials {
+    .content-container {
+      .testimonial {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        .name{
+          margin-top: 0;
+        }
+        .reviewer-details{
+          text-align: center;
+        }
+      }
+    }
+  }
+}

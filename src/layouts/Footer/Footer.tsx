@@ -38,30 +38,33 @@ const Footer = () => {
           <div className="link">
             <h3>Quick Links</h3>
             <ul>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-    
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
+
+              <li>
+                <a href="#">Contact</a>
+              </li>
             </ul>
           </div>
 
           <div className="link">
             <h3>Contects</h3>
             <ul>
-                <li>
-                    <a href="#">iramanagrawqal@gmail.com</a>
-                </li>
-                <li>
-                    <a href="#">8959095100</a>
-                </li>
+              <li>
+                <a href="#">iramanagrawqal@gmail.com</a>
+              </li>
+              <li>
+                <a href="#">8959095100</a>
+              </li>
             </ul>
           </div>
+        </div>
+        <div className="mob copyright">
+          This Website is designed and developed by Raman @2023
         </div>
       </div>
     </footer>
