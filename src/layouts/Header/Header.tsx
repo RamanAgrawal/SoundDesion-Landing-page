@@ -7,7 +7,7 @@ const Header = () => {
       <div className="wrapper">
         <Navbar/>
         <div className="cta">
-          <p className="course-name">Sounds M-asterclass</p>
+          <p className="course-name">Sounds Masterclass</p>
           <h1>Learn the art of sound design</h1>
           <button className="cta-button">Demo Lesson</button>
         </div>
