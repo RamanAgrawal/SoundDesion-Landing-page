@@ -74,14 +74,13 @@ nav {
     right: 0;
     padding: 58px 32px;
     transform: translateY(-100%);
-    transform: all 1200ms cubic-bezier(0.3, 0.96, 0.59, 0.95);
-   
+    transition: all 1200ms cubic-bezier(0.3, 0.96, 0.59, 0.95);
     ul {
       list-style: none;
       li {
         margin-bottom: 2rem;
         a {
-          font-size: 1.5rem;
+          font-size: 1rem;
           font-weight: 800;
           color: $white-color;
         }
@@ -90,7 +89,7 @@ nav {
     .close {
       position: absolute;
       top: 32px;
-      right: 32px;
+      right: 60px;
       color: $white-color;
       font-size: 1.5rem;
     }

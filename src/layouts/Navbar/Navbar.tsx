@@ -48,7 +48,7 @@ const Navbar = () => {
       </div>
       <ul>
         {navigations.map((nav, index) => (
-          <li key={index}>
+          <li key={index} onClick={()=>setShowNav(false)}>
             <a href={nav.link}>{nav.name}</a>
           </li>
         ))}
