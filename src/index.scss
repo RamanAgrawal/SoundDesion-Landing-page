@@ -1,4 +1,6 @@
+@use "./styles/variables.scss" as *;
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Inter:wght@400;800&display=swap");
+
 *,
 ::after,
 ::before {
@@ -14,6 +16,30 @@ body {
   max-width: 1024px;
   margin: 0 auto;
 }
-a{
+a {
   text-decoration: none;
+}
+
+// Sections
+
+section {
+  padding: 5rem 0;
+  color: $white-color;
+  
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 800;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background:$red-color;
+      border-radius: 10px;
+    }
+  }
 }

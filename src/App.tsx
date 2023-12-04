@@ -1,13 +1,8 @@
-import Header from "./layouts/Header/Header"
+
+import HomePage from "./pages/HomePage"
 
 const App = () => {
-  return (
-    <>
-    <Header/>
-    <div>dfsdf</div>
-    </>
-  )
+  return <HomePage/>
 }
-
 
 export default App
