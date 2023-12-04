@@ -1,4 +1,5 @@
 import Header from "../layouts/Header/Header"
+import Info from "../layouts/Info/Info"
 import Topics from "../layouts/Topics/Topics"
 
 
@@ -7,6 +8,7 @@ const HomePage = () => {
     <>
     <Header/>
     <Topics/>
+    <Info/>
     </>
   )
 }
