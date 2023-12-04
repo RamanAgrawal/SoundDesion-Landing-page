@@ -25,7 +25,7 @@ a {
 section {
   padding: 5rem 0;
   color: $white-color;
-  
+
   h2 {
     font-size: 2.5rem;
     line-height: 3rem;
@@ -39,13 +39,40 @@ section {
       left: 0;
       width: 80px;
       height: 4px;
-      background:$red-color;
+      background: $red-color;
       border-radius: 10px;
     }
   }
 }
 
-.content-container{
+.content-container {
   display: flex;
   justify-content: space-between;
+}
+
+
+@media (max-width: 1040px) {
+  .wrapper {
+    max-width: 694px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+  }
+  .wrapper {
+    padding: 0 2rem;
+  }
+  section {
+    h2 {
+      font-size: 1.5rem;
+      &::after {
+        width: 50px;
+        bottom: 0;
+      }
+    }
+  }
 }
