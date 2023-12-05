@@ -1,32 +1,43 @@
 @use "../../styles/variables.scss" as *;
 
+/* Testimonials Section Styles */
 #testimonials {
-  background: $dark-color;
+  background: $dark-color; /* Background color using variable */
 
+  /* Container for testimonial content */
   .content-container {
-    display: flex;
-    margin-top: 50px;
-    justify-content: space-between;
+    display: flex; /* Flexbox layout for content */
+    margin-top: 50px; /* Top margin */
+    justify-content: space-between; /* Spacing between elements */
+    
+    /* Testimonial Card Styles */
     .testimonial {
-      width: 16rem;
+      width: 16rem; /* Set width for testimonial cards */
 
-      img{
+      /* Testimonial Image Styles */
+      img {
         height: 100px;
         width: 100px;
         border-radius: 10px;
       }
-      .name{
+
+      /* Testimonial Name Styles */
+      .name {
         margin-top: 1rem;
         font-size: 1.2rem;
         font-weight: 700;
       }
-      .company{
+
+      /* Testimonial Company Styles */
+      .company {
         font-size: 0.8rem;
         text-transform: uppercase;
         padding: 6px 0;
-        opacity:0.7
+        opacity: 0.7;
       }
-      .review{
+
+      /* Testimonial Review Text Styles */
+      .review {
         font-size: 1rem;
         font-weight: 400;
         line-height: 1.4rem;
@@ -36,37 +47,46 @@
   }
 }
 
-//tablet version
-
-@media(max-width: 1024px){
+/* Tablet Version Media Query */
+@media (max-width: 1024px) {
   #testimonials {
     .content-container {
-      flex-direction: column;
-      gap:3rem;
-      margin-left: 1.2rem;
-      margin-top: 3rem;
+      flex-direction: column; /* Arrange content in a column */
+      gap: 3rem; /* Spacing between testimonials */
+      margin-left: 1.2rem; /* Left margin */
+      margin-top: 3rem; /* Top margin */
+
+      /* Individual Testimonial Styles */
       .testimonial {
-        display: flex;
-      gap:2rem;
-      width: 100%;
+        display: flex; /* Flex layout */
+        gap: 2rem; /* Spacing between testimonials */
+        width: 100%; /* Full width */
+        .reviewer-details{
+          margin-top: -1rem;
+        }
       }
     }
   }
 }
 
-
-@media(max-width:720px){
+/* Mobile Version Media Query */
+@media (max-width: 720px) {
   #testimonials {
     .content-container {
       .testimonial {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        .name{
-          margin-top: 0;
+        flex-direction: column; /* Arrange content in a column */
+        align-items: center; /* Center-align testimonials */
+        gap: 1rem; /* Spacing between testimonials */
+        
+        /* Adjusted Name Styles */
+        .name {
+          margin-top: 0; /* Reset top margin for name */
         }
-        .reviewer-details{
-          text-align: center;
+
+        /* Reviewer Details Alignment */
+        .reviewer-details {
+          margin-top: 0.5rem;
+          text-align: center; /* Center-align reviewer details */
         }
       }
     }
