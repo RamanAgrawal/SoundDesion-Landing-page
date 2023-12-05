@@ -1,39 +1,57 @@
+
+// Importing variables from variables.scss file
 @use "./styles/variables.scss" as *;
+
+// Importing fonts from Google Fonts
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Inter:wght@400;800&display=swap");
 
+// Resetting default styles for elements
 *,
 ::after,
 ::before {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-html{
+
+// Setting smooth scroll behavior for HTML
+html {
   scroll-behavior: smooth;
 }
+
+// Setting the default font family for the body
 body {
   font-family: "Inter", sans-serif;
 }
+
+// Creating a wrapper for content with a max-width and centered margin
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
 }
+
+// Removing underline from anchor links
 a {
   text-decoration: none;
 }
 
 // Sections
 
+// Styling for sections on the page
 section {
   padding: 5rem 0;
-  color: $white-color;
+  color: $white-color; /* Using color variable from variables.scss */
 
+  // Styling for section headings
   h2 {
     font-size: 2.5rem;
     line-height: 3rem;
     font-weight: 800;
     margin-bottom: 2rem;
     position: relative;
+
+    // Creating an underline effect using pseudo-element
     &::after {
       content: "";
       position: absolute;
@@ -41,33 +59,46 @@ section {
       left: 0;
       width: 80px;
       height: 4px;
-      background: $red-color;
+      background: $red-color; /* Using color variable from variables.scss */
       border-radius: 10px;
     }
   }
 }
 
+// Styling for containers holding content
 .content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
+// Responsive design for smaller screens
 
+// Media query for screens up to 1040px width
 @media (max-width: 1040px) {
   .wrapper {
-    max-width: 694px;
+    max-width: 694px; /* Adjusting wrapper width for smaller screens */
   }
 }
 
+// Media query for screens up to 768px width
 @media screen and (max-width: 768px) {
+  // Adjusting layout for smaller screens
   .content-container {
     flex-direction: column;
     gap: 5rem;
     justify-content: center;
   }
+
+  // Adjusting padding for smaller screens
   .wrapper {
     padding: 0 2rem;
   }
+
+  // Adjusting heading size and underline for smaller screens
   section {
     h2 {
       font-size: 1.5rem;
