@@ -48,7 +48,14 @@ const Topics: React.FC = (): ReactElement => {
           </ul>
           {/* Container to display the topic image */}
           <div className="topic-img">
-            <img src={topicImg} alt={topicImg} />
+            <img
+              src={topicImg}
+              alt={topicImg}
+              srcSet={`${topicImg} 300w, ${topicImg} 600w, ${topicImg} 900w`}
+              sizes="(max-width: 600px) 300px,
+            (max-width: 900px) 600px,
+            900px"
+            />
           </div>
         </div>
         {/* Background element */}

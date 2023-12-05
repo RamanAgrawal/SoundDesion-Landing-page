@@ -14,7 +14,10 @@ const Info = () => {
         <div className="content-container" aria-label="Information content">
           {/* Student information */}
           <div className="info-content" aria-label="Student information">
-            <img src={studentIcon} alt="Student Icon" />
+            <img src={studentIcon} alt="Student Icon" 
+            width="auto"
+            height="auto"
+             />
             {/* Total number of students */}
             <div className="amount">23000+</div>
             {/* Type of information */}

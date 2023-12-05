@@ -19,7 +19,7 @@ const PostCard: FC<PostCardI> = ({ post }) => {
    
       <a href="#" aria-label={post.title}>
         
-        <img loading="lazy" src={post.img} alt={post.title} />
+        <img loading="lazy" src={post.img}  width="100%" alt={post.title} />
       </a>
      
       <a href="#" aria-label={post.title}>
