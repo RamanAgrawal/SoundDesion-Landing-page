@@ -1,78 +1,92 @@
 @use "../../styles/variables.scss" as *;
 
+/* Styling for Topics Section */
 #topics {
-  background-color: black;
+  background-color: black; /* Background color */
+  
+  /* Wrapper Styles */
   .wrapper {
-    position: relative;
+    position: relative; /* Positioning context */
   }
+
+  /* Content Container Styles */
   .content-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem;
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Spacing between elements */
+    align-items: center; /* Vertical alignment */
+    padding: 0.75rem; /* Padding */
+    
+    /* Unordered List Styles */
     ul {
-      list-style: none;
+      list-style: none; /* Remove list bullets */
       margin: 0;
-      margin-left: 1.5rem;
+      margin-left: 1.5rem; /* Left margin for list items */
+      
+      /* List Item Styles */
       li {
-        font-family: "alegreya", serif;
-        font-size: 1.2rem;
-        font-weight: 400;
-        margin: 1.5rem 0;
-        color: $white-color;
-        position: relative;
+        font-family: "alegreya", serif; /* Font family */
+        font-size: 1.2rem; /* Font size */
+        font-weight: 400; /* Font weight */
+        margin: 1.5rem 0; /* Margin */
+        color: $white-color; /* Text color */
+        position: relative; /* Positioning context */
+        
+        /* Bullet Point Styles */
         &::before {
-          content: "";
-          position: absolute;
-          left: -1.5rem;
-          top: 50%;
-          width: 8px;
-          height: 8px;
-          background: $red-color;
-          border-radius: 50%;
-          margin-right: 10px;
-          transform: translateY(-50%);
+          content: ""; /* Empty content */
+          position: absolute; /* Positioning context */
+          left: -1.5rem; /* Positioning */
+          top: 50%; /* Positioning */
+          width: 8px; /* Width of bullet point */
+          height: 8px; /* Height of bullet point */
+          background: $red-color; /* Bullet point color */
+          border-radius: 50%; /* Make it a circle */
+          margin-right: 10px; /* Spacing from text */
+          transform: translateY(-50%); /* Adjust vertical alignment */
         }
       }
     }
+
+    /* Topic Image Styles */
     .topic-img {
-      width: 60%;
+      width: 60%; /* Width of the image container */
       img {
-        width: 100%;
-        object-fit: cover;
+        width: 100%; /* Make the image responsive */
+        object-fit: cover; /* Maintain aspect ratio and cover */
       }
     }
   }
+
+  /* Positioned Element Styles */
   .ele1 {
-    position: absolute;
-    bottom: 1rem;
-    right: 0;
+    position: absolute; /* Positioning context */
+    bottom: 1rem; /* Positioning */
+    right: 0; /* Positioning */
   }
 }
 
-//Tablet Version
+/* Tablet Version Media Query */
 @media (max-width: 1024px) {
   #topics {
-    .topic-img {
-      img {
-        width: 385px;
-        height: 280px;
-      }
-    }
-    .ele1 {
-      right:32px;
+    /* Adjustments for Tablet Version */
+    .topic-img img {
+      width: 385px; /* Adjusted width */
+      height: 280px; /* Adjusted height */
     }
   }
 }
 
-//Smart Phone
-
+/* Smartphone Version Media Query */
 @media (max-width: 720px) {
   #topics {
-    .topic-img {
-      img {
-        display: none;
-      }
+    /* Hide Image for Smartphones */
+    .topic-img img {
+      display: none; /* Hide the image */
+    }
+    
+    /* Adjusted Position for Element */
+    .ele1 {
+      right: 32px; /* Adjusted right position */
     }
   }
 }
