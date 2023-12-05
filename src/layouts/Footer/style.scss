@@ -1,70 +1,98 @@
 @use "../../styles/variables.scss" as *;
 
+/* Footer Styles */
 footer {
   background: black;
+
+  /* Logo Styles */
   .logo {
-    color: $white-color;
+    color: $white-color; /* Setting color using a variable */
     font-size: 1rem;
     font-weight: 800;
+
+    /* Span within Logo */
     span {
-      color: $red-color;
+      color: $red-color; /* Color defined by variable */
     }
   }
+
+  /* Anchor Link Styles */
   a {
     color: white;
+
     &:hover {
-      text-decoration: underline;
+      text-decoration: underline; /* Underline on hover */
     }
   }
-  .social-icons {
-    display: flex;
-    gap: 1rem;
-    margin: 1.5rem 0;
-  }
-  .content-container {
-    padding: 50px 0;
 
+  /* Social Icons Styles */
+  .social-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem; /* Spacing between social icons */
+    margin: 1.5rem 0; /* Margin for social icons */
+  }
+
+  /* Content Container Styles */
+  .content-container {
+    padding: 50px 0; /* Padding for content container */
+
+    /* Link Styles */
     .link {
       h3 {
-        color: $red-color;
+        color: $red-color; /* Heading color using variable */
         font-weight: 700;
         font-size: 1.2rem;
       }
 
+      /* Unordered List Styles */
       ul {
         margin-top: 1rem;
+
+        /* List Item Styles */
         li {
           font-size: 1rem;
           font-weight: 400;
-          margin: 8px 16px;
+          margin: 8px 16px; /* Margin for list items */
         }
       }
     }
   }
 
+  /* Copyright Styles */
   .copyright {
     font-size: 1rem;
     line-height: 1.4rem;
     color: white;
   }
+
+  /* Mobile Styles */
   .mob {
-    display: none;
+    display: none; /* Hide on non-mobile screens */
   }
 }
 
+/* Media Query for max-width 720px */
 @media (max-width: 720px) {
   footer {
+    /* Adjustments for smaller screens */
+
+    padding-bottom: 2rem;
     .content-container {
-      gap: 2.5rem;
+      gap: 2.5rem; /* Increase gap for smaller screens */
     }
+
     .copyright {
-      display: none;
+      display: none; /* Hide copyright on smaller screens */
     }
+
     .mob {
-      display: block;
+      display: block; /* Show mob class on smaller screens */
     }
+
     .social-icons {
-      margin-bottom: 0;
+      margin-bottom: 0; /* Remove margin bottom for social icons */
     }
   }
 }
