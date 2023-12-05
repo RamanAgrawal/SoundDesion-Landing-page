@@ -1,29 +1,52 @@
 @use "../../styles/variables.scss" as *;
 
+/* Info Section Styles */
 #info {
-  background: $dark-color;
+  background: $dark-color; /* Background color using variable */
+  
+  /* Wrapper for info content */
   .wrapper {
     position: relative;
-    padding: 2rem;
+    padding: 2rem; /* Padding around the content */
   }
+  
+  /* Element 2 Styles */
   .ele2 {
     position: absolute;
-    top: 0;
+    top: 0; /* Positioned at the top */
   }
+  
+  /* Container for info content */
   .content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; /* Distributing content evenly horizontally */
+    
+    /* Info content styles */
     .info-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
-      gap: 4px;
+      gap: 4px; /* Gap between elements */
       width: 100%;
+      
+      /* Amount text styles */
       .amount {
         font-size: 2.5rem;
         font-weight: 800;
       }
-      .type{
+      
+      /* Type text styles */
+      .type {
         font-weight: 700;
         font-size: 1.8rem;
       }
@@ -31,22 +54,28 @@
   }
 }
 
+
+/* Media Query for max-width 720px */
 @media(max-width:720px){
-  
-#info {
-  .ele2 {
-    left:2rem;
-  }
-  .content-container {
-    .info-content {
-      .amount {
-        font-size: 2rem;
-      }
-      .type{
-        font-size: 1.2rem; 
+  #info {
+    /* Element 2 adjustments for smaller screens */
+    .ele2 {
+      left: 2rem; /* Positioned to the left with some margin */
+    }
+    
+    /* Adjustments for content on smaller screens */
+    .content-container {
+      .info-content {
+        /* Amount text size adjustment */
+        .amount {
+          font-size: 2rem;
+        }
+        
+        /* Type text size adjustment */
+        .type {
+          font-size: 1.2rem; /* Smaller font size for type text */
+        }
       }
     }
   }
-
-}
 }
